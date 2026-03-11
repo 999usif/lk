@@ -43,32 +43,32 @@
         lbrkt: lbrkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT &kp N8>;
+            bindings = <&none>;
         };
         rbrkt: rbrkt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT &kp N9>;
+            bindings = <&none>;
         };
         lessthan: lessthan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUBS>;
+            bindings = <&none>;
         };
         greaterthan: greaterthan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT &kp NUBS>;
+            bindings = <&none>;
         };
-        test1: test1 {
+        lcurl: lcurl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LT>;
+            bindings = <&none>;
         };
-        test2: test2 {
+        rcurl: rcurl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GT>;
+            bindings = <&none>;
         };
     };
 
@@ -112,8 +112,8 @@ keymap { compatible = "zmk,keymap";
             label = "Num";
             bindings = <
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-&kp CAPS  &none  &none  &none  &none  &kp F21 &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-&kp LSHFT &none  &none  &none  &none  &kp C_BRI_DN &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
+&kp CAPS  &none  &none  &none  &none  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+&kp LSHFT &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
 #ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #elif defined(MACOS)
@@ -126,8 +126,8 @@ keymap { compatible = "zmk,keymap";
             label = "Nav";
             bindings = <
 &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-&kp CAPS  &none &none &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
-&kp LSHFT &lessthan &greaterthan &test1 &test2 &none &none &none &none &none &none &kp RSHFT
+&kp CAPS  &lcurl &rcurl &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
+&kp LSHFT &lessthan &greaterthan &none &none &none &none &none &none &none &none &kp RSHFT
 #ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #elif defined(MACOS)
@@ -148,6 +148,6 @@ keymap { compatible = "zmk,keymap";
             >;
 
     };
-    };
+  };
 };
 
