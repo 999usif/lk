@@ -74,11 +74,11 @@
 #ifdef QWERTY_BASE
  &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
  &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+ &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
 #else
  &kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RSHFT
+ &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
@@ -96,47 +96,51 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
 &kp CAPS  &none  &none  &none  &none  &kp F21 &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
 &kp LSHFT &none  &none  &none  &none  &kp C_BRI_DN &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
-#ifdef TBLE_DUAL_2U
 &kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
-#elif defined(TBLE_MIT)
-&trans  &trans       &trans     &kp N0      &trans           &none            &trans        &kp DEL      &trans &trans &trans
-#else
-&trans  &trans       &trans     &kp N0      &trans    &none         &none     &kp ESC        &kp DEL      &trans &trans &trans
-#endif
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
-&trans     &trans     &trans     &trans      &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
-&trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
-#ifdef TBLE_DUAL_2U
-&trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
-#elif defined(TBLE_MIT)
-&trans  &trans        &trans     &trans      &trans                &trans             &trans      &trans   &trans &trans &trans
-#else
-&trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
-#endif
+&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+&kp CAPS  &macro_0 &macro_1 &macro_2 &macro_3 &none &none &none &none &none &none &kp F12
+&kp LSHFT &macro_4 &macro_5 &none &none &none &none &none &none &none &none &none
+&kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
             >;
         };
 
-        sym_layer {
-            label = "Sym";
-            bindings = <
-&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
-&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
-#ifdef TBLE_DUAL_2U
-&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
-#elif defined(TBLE_MIT)
-&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &trans
-#else
-&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
-#endif
-            >;
-        };
+//        nav_layer {
+//            label = "Nav";
+//            bindings = <
+//&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
+//&trans     &trans     &trans     &trans      &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
+//&trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
+//#ifdef TBLE_DUAL_2U
+//&trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
+//#elif defined(TBLE_MIT)
+//&trans  &trans        &trans     &trans      &trans                &trans             &trans      &trans   &trans &trans &trans
+//#else
+//&trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
+//#endif
+//            >;
+//        };
+//
+//        sym_layer {
+//            label = "Sym";
+//            bindings = <
+//&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
+//&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
+//&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
+//#ifdef TBLE_DUAL_2U
+//&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
+//#elif defined(TBLE_MIT)
+//&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &trans
+//#else
+//&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
+//#endif
+//            >;
+//        };
 
 
     };
