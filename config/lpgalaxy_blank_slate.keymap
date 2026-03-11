@@ -37,11 +37,38 @@
     };
 
     macros {
-      ZMK_MACRO(thumbs_up,
-		wait-ms = <1>;
-		tap-ms = <5>;
-                bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
-		)
+        rbrkt: lbrkt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp N8>;
+        };
+        lbrkt: rbrkt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RALT &kp N9>;
+        };
+        lt: lt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+        };
+        rt: rt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+        };
+        test1: test1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT>;
+        };
+        test2: test2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RT>;
+        };
+    };
+
     };
     
     tap_dances {
@@ -64,9 +91,7 @@
         };
     };
 #endif
-
-    keymap {
-        compatible = "zmk,keymap";
+keymap { compatible = "zmk,keymap";
 
         base_layer {
             label = "Base";
@@ -96,7 +121,9 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
 &kp CAPS  &none  &none  &none  &none  &kp F21 &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
 &kp LSHFT &none  &none  &none  &none  &kp C_BRI_DN &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
-&kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
+#ifdef TBLE_DUAL_2U
+&kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &mo NAV_L &kp RALT &kp RCTRL &kp ENTER
+#endif
             >;
         };
 
@@ -104,44 +131,19 @@
             label = "Nav";
             bindings = <
 &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-&kp CAPS  &macro_0 &macro_1 &macro_2 &macro_3 &none &none &none &none &none &none &kp F12
-&kp LSHFT &macro_4 &macro_5 &none &none &none &none &none &none &none &none &none
-&kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
+&kp CAPS  &none &none &lbkt &rbkt &none &none &none &none &none &none &kp F12
+&kp LSHFT &lt &rt &test1 &test2 &none &none &none &none &none &none &none
+#ifdef TBLE_DUAL_2U
+&kp LCTRL &kp LGUI &kp LALT &mo NUM_L &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
+#endif
             >;
         };
 
-//        nav_layer {
-//            label = "Nav";
-//            bindings = <
-//&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
-//&trans     &trans     &trans     &trans      &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
-//&trans     &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
-//#ifdef TBLE_DUAL_2U
-//&trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
-//#elif defined(TBLE_MIT)
-//&trans  &trans        &trans     &trans      &trans                &trans             &trans      &trans   &trans &trans &trans
-//#else
-//&trans  &trans        &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
-//#endif
-//            >;
-//        };
-//
 //        sym_layer {
-//            label = "Sym";
-//            bindings = <
-//&trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
-//&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
-//&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
-//#ifdef TBLE_DUAL_2U
-//&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
-//#elif defined(TBLE_MIT)
-//&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &trans
-//#else
-//&trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
-//#endif
-//            >;
+//          label = "Sym";
+//          bindings = <>;
+//
 //        };
-
 
     };
 };
