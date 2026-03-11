@@ -137,11 +137,15 @@ keymap { compatible = "zmk,keymap";
             >;
         };
 
-//        sym_layer {
-//          label = "Sym";
-//          bindings = <>;
-//
-//        };
+        sym_layer {
+            label = "Sym";
+            bindings = <
+&studio_unlock     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
+&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
+&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
+#ifdef TBLE_DUAL_2U
+&trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
+#endif
 
     };
 };
