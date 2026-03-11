@@ -19,6 +19,9 @@
 #define NAV_L 2
 #define SYM_L 3
 
+//#define WINDOWS 1
+#define MACOS 1
+
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
@@ -94,21 +97,13 @@ keymap { compatible = "zmk,keymap";
         base_layer {
             label = "Base";
             bindings = <
-#ifdef QWERTY_BASE
  &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
  &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-#else
- &kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
- &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
-#endif
-#ifdef TBLE_DUAL_2U
+#ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
-#elif defined(TBLE_MIT)
- &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
-#else
- &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L      &kp SPACE      &kp RET          &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+#elif defined(MACOS)
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #endif
             >;
         };
@@ -119,8 +114,10 @@ keymap { compatible = "zmk,keymap";
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
 &kp CAPS  &none  &none  &none  &none  &kp F21 &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
 &kp LSHFT &none  &none  &none  &none  &kp C_BRI_DN &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
-#ifdef TBLE_DUAL_2U
-&kp LCTRL &kp LGUI &kp LALT &none &kp DEL  &kp SPACE &mo NAV_L &kp RALT &kp RCTRL &kp ENTER
+#ifdef WINDOWS
+ &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
+#elif defined(MACOS)
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #endif
             >;
         };
@@ -130,9 +127,11 @@ keymap { compatible = "zmk,keymap";
             bindings = <
 &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
 &kp CAPS  &none &none &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
-&kp LSHFT &lessthan &greaterthan &test1 &test2 &none &none &none &none &none &none &none
-#ifdef TBLE_DUAL_2U
-&kp LCTRL &kp LGUI &kp LALT &mo NUM_L &kp DEL  &kp SPACE &none &kp RALT &kp RCTRL &kp ENTER
+&kp LSHFT &lessthan &greaterthan &test1 &test2 &none &none &none &none &none &none &kp RSHFT
+#ifdef WINDOWS
+ &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
+#elif defined(MACOS)
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #endif
             >;
         };
