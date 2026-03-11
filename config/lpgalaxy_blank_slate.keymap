@@ -146,7 +146,9 @@ keymap { compatible = "zmk,keymap";
 #ifdef TBLE_DUAL_2U
 &trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
 #endif
+            >;
 
+    };
     };
 };
 
