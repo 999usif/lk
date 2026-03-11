@@ -50,12 +50,12 @@
         lessthan: lessthan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp NUBS>;
         };
         greaterthan: greaterthan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp LSHFT &kp NUBS>;
         };
         test1: test1 {
             compatible = "zmk,behavior-macro";
