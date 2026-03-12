@@ -32,3 +32,15 @@ And then comment out the line in `config/lpgalaxy_blank_slate.conf`:
 ```
 # CONFIG_ZMK_PM_SOFT_OFF=y
 ```
+
+# todo
+- [ ] fix macros for curly braces
+- [ ] fix macros for square braces
+- [ ] fix macros for lt and gt
+
+- [ ] printscreen
+
+- [ ] get battery
+- [ ] secure keyboard in case somehow (friction fit?)
+
+- [ ] globe button for macos
