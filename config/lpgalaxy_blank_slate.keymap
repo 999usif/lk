@@ -38,6 +38,10 @@
                        &layout_ortho_4x12_all1u;
 #endif
     };
+    &macro {
+      wait-ms = <10>;
+      tap-ms = <10>;
+    };
 
     macros {
       lbrkt: lbrkt {
