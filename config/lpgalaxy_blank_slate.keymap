@@ -38,10 +38,6 @@
                        &layout_ortho_4x12_all1u;
 #endif
     };
-    &macro {
-      wait-ms = <10>;
-      tap-ms = <10>;
-    };
 
     macros {
       lbrkt: lbrkt {
@@ -49,7 +45,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp RALT
-              &kp N8
+              &macro_tap &kp N8
               &macro_release &kp RALT
           >;
       };
@@ -59,7 +55,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp RALT
-              &kp N9
+              &macro_tap &kp N9
               &macro_release &kp RALT
           >;
       };
@@ -75,7 +71,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp LSHFT
-              &kp NUBS
+              &macro_tap &kp NUBS
               &macro_release &kp LSHFT
           >;
       };
@@ -86,7 +82,7 @@
           bindings = <
               &macro_press &kp RALT
               &macro_press &kp LSHFT
-              &kp N8
+              &macro_tap &kp N8
               &macro_release &kp LSHFT
               &macro_release &kp RALT
           >;
@@ -98,7 +94,7 @@
           bindings = <
               &macro_press &kp RALT
               &macro_press &kp LSHFT
-              &kp N9
+              &macro_tap &kp N9
               &macro_release &kp LSHFT
               &macro_release &kp RALT
           >;
@@ -109,7 +105,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp LSHFT
-              &kp N8
+              &macro_tap &kp N8
               &macro_release &kp LSHFT
           >;
       };
@@ -119,7 +115,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp LSHFT
-              &kp N9
+              &macro_tap &kp N9
               &macro_release &kp LSHFT
           >;
       };
@@ -129,7 +125,7 @@
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp RALT
-              &kp N7
+              &macro_tap &kp N7
               &macro_release &kp RALT
           >;
       };
