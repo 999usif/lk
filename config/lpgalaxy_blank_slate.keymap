@@ -196,53 +196,53 @@
           >;
       };
 
-      //equals: equals {
-      //    compatible = "zmk,behavior-macro";
-      //    #binding-cells = <0>;
-      //    bindings = <
-      //      &macro_tap &kp EQUAL
-      //    >;
-      //};
+      equals: equals {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_tap &kp EQUAL
+          >;
+      };
 
-      //plus: plus {
-      //    compatible = "zmk,behavior-macro";
-      //    #binding-cells = <0>;
-      //    bindings = <
-      //      &macro_tap &kp PLUS
-      //    >; // dedicated key on Nordic layout
-      //};
+      plus: plus {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_tap &kp PLUS
+          >;
+      };
 
-    //   backslash: backslash {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N7
-    //         &macro_release &kp LSHFT 
-    //         &macro_release &kp LALT 
-    //       >; // ⌥ + ⇧ + 7
-    //   };
+      backslash: backslash {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp LALT 
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N7
+              &macro_release &kp LSHFT 
+              &macro_release &kp LALT 
+          >;
+      };
 
-    //   slash: slash {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N7
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
+      slash: slash {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N7
+              &macro_release &kp LSHFT 
+          >;
+      };
 
-    //   question: question {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp MINUS
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
+      question: question {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp MINUS
+              &macro_release &kp LSHFT 
+          >;
+      };
 
 
     };
