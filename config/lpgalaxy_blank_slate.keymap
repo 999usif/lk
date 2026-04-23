@@ -148,25 +148,25 @@
           >;
       };
 
-    //   double_quote: double_quote {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp MINUS
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
+      double_quote: double_quote {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp MINUS
+              &macro_release &kp LSHFT 
+          >;
+      };
 
-    //   asterisk: asterisk {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N8
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
+      asterisk: asterisk {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N8
+              &macro_release &kp LSHFT 
+          >;
+      };
 
     //   at_sign: at_sign {
     //       compatible = "zmk,behavior-macro";
