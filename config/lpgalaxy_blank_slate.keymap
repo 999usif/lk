@@ -130,152 +130,152 @@
           >;
       };
 
-    //   backtick: backtick {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_tap &kp BSLH 
-    //         &macro_release &kp LALT 
-    //       >; // ⌥ + \
-    //   };
+      backtick: backtick {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+            &macro_press &kp LALT 
+            &macro_tap &kp BSLH 
+            &macro_release &kp LALT 
+          >; // ⌥ + \
+      };
 
-    //   single_quote: single_quote {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_tap &kp MINUS
-    //       >; // ' key
-    //   };
+      single_quote: single_quote {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+            &macro_tap &kp MINUS
+          >; // ' key
+      };
 
-    //   double_quote: double_quote {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp MINUS
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
+      double_quote: double_quote {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+            &macro_press &kp LSHFT 
+            &macro_tap &kp MINUS
+            &macro_release &kp LSHFT 
+          >;
+      };
 
-    //   asterisk: asterisk {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N8
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
-
-    //   at_sign: at_sign {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_tap &kp N2
-    //         &macro_release &kp LALT 
-    //       >; // ⌥ + 2
-    //   };
-
-    //   caret: caret {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT
-    //         &macro_tap &kp N6
-    //         &macro_release &kp LALT
-    //       >;
-    //   };
-
-    //   tilde: tilde {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_tap &kp N4
-    //         &macro_release &kp LALT
-    //       >; // ⌥ + 4
-    //   };
-
-      //equals: equals {
-      //    compatible = "zmk,behavior-macro";
-      //    #binding-cells = <0>;
-      //    bindings = <
-      //      &macro_tap &kp EQUAL
-      //    >;
-      //};
-
-      //plus: plus {
-      //    compatible = "zmk,behavior-macro";
-      //    #binding-cells = <0>;
-      //    bindings = <
-      //      &macro_tap &kp PLUS
-      //    >; // dedicated key on Nordic layout
-      //};
-
-    //   backslash: backslash {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N7
-    //         &macro_release &kp LSHFT 
-    //         &macro_release &kp LALT 
-    //       >; // ⌥ + ⇧ + 7
-    //   };
-
-    //   slash: slash {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp N7
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
-
-    //   question: question {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LSHFT 
-    //         &macro_tap &kp MINUS
-    //         &macro_release &kp LSHFT 
-    //       >;
-    //   };
-
-
-    };
-
-    tap_dances {
-    	shifty: shift_caps_word {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TD_SHIFTY";
-      #binding-cells = <0>;
-      tapping-term-ms = <150>;
-      bindings = <&kp LSHFT>, <&caps_word>;
-	  };
-  };
-
-// Conditional layer only when we have less thumb keys
-#ifdef TBLE_DUAL_2U
-    cond_layers {
-        compatible = "zmk,conditional-layers";
-	tri {
-	    if-layers = <NUM_L NAV_L>;
-	    then-layer = <SYM_L>;
-        };
-    };
-#endif
-keymap { compatible = "zmk,keymap";
-
-        base_layer {
-            label = "Base";
+      asterisk: asterisk {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
             bindings = <
- &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
- &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N8
+              &macro_release &kp LSHFT 
+            >;
+        };
+
+        at_sign: at_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LALT 
+              &macro_tap &kp N2
+              &macro_release &kp LALT 
+            >; // ⌥ + 2
+        };
+
+        caret: caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LALT
+              &macro_tap &kp N6
+              &macro_release &kp LALT
+            >;
+        };
+
+        tilde: tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LALT 
+              &macro_tap &kp N4
+              &macro_release &kp LALT
+            >; // ⌥ + 4
+        };
+
+        equals: equals {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_tap &kp EQUAL
+            >;
+        };
+
+        plus: plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_tap &kp PLUS
+            >; // dedicated key on Nordic layout
+        };
+
+        backslash: backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LALT 
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N7
+              &macro_release &kp LSHFT 
+              &macro_release &kp LALT 
+            >; // ⌥ + ⇧ + 7
+        };
+
+        slash: slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp N7
+              &macro_release &kp LSHFT 
+            >;
+        };
+
+        question: question {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+              &macro_press &kp LSHFT 
+              &macro_tap &kp MINUS
+              &macro_release &kp LSHFT 
+            >;
+        };
+
+
+      };
+
+      tap_dances {
+      	shifty: shift_caps_word {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TD_SHIFTY";
+        #binding-cells = <0>;
+        tapping-term-ms = <150>;
+        bindings = <&kp LSHFT>, <&caps_word>;
+	    };
+  };  
+
+// C  onditional layer only when we have less thumb keys
+#ifd  ef TBLE_DUAL_2U
+      cond_layers {
+          compatible = "zmk,conditional-layers";
+	tr  i {
+	      if-layers = <NUM_L NAV_L>;
+	      then-layer = <SYM_L>;
+          };
+      };
+#end  if
+keym  ap { compatible = "zmk,keymap";
+
+          base_layer {
+              label = "Base";
+              bindings = <
+ &kp   ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
+ &kp   TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
 #ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
