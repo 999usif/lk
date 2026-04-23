@@ -216,11 +216,11 @@
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
-              &macro_press &kp LALT 
+              &macro_press &kp RALT 
               &macro_press &kp LSHFT 
               &macro_tap &kp N7
               &macro_release &kp LSHFT 
-              &macro_release &kp LALT 
+              &macro_release &kp RALT 
           >;
       };
 
@@ -317,9 +317,9 @@ keymap { compatible = "zmk,keymap";
         sym_layer {
             label = "Sym";
             bindings = <
-&studio_unlock &trans &trans &trans &kp N0 &kp N0 &kp N0 &kp N0 &trans &trans &trans &bootloader
-&trans &trans &trans &trans &kp N0 &backtick &kp N0 &kp N0 &trans &trans &trans &trans
-&trans &trans &trans &trans &kp N0 &kp N0 &kp N0 &kp N0 &trans &trans &trans &trans
+&studio_unlock &trans &trans &trans &tilde &single_quote &double_quote &asterisk &trans &trans &trans &bootloader
+&trans &trans &trans &trans &at_sign &backtick &caret &equals &trans &trans &trans &trans
+&trans &trans &trans &trans &plus &backslash &slash &question &trans &trans &trans &trans
 #ifdef TBLE_DUAL_2U
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 #endif
