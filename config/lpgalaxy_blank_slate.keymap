@@ -131,7 +131,6 @@
       };
 
       backtick: backtick {
-          label = "`";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -142,7 +141,6 @@
       };
 
       single_quote: single_quote {
-          label = "'";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -151,7 +149,6 @@
       };
 
       double_quote: double_quote {
-          label = "\"";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -162,7 +159,6 @@
       };
 
       asterisk: asterisk {
-          label = "*";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -173,7 +169,6 @@
       };
 
       at_sign: at_sign {
-          label = "@";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -184,7 +179,6 @@
       };
 
       caret: caret {
-          label = "^";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -195,7 +189,6 @@
       };
 
       tilde: tilde {
-          label = "~";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -206,7 +199,6 @@
       };
 
       equals: equals {
-          label = "=";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -215,7 +207,6 @@
       };
 
       plus: plus {
-          label = "+";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -224,7 +215,6 @@
       };
 
       backslash: backslash {
-          label = "\\";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -237,7 +227,6 @@
       };
 
       slash: slash {
-          label = "/";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -248,7 +237,6 @@
       };
 
       question: question {
-          label = "?";
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
