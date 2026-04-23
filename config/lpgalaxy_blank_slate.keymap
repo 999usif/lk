@@ -140,111 +140,111 @@
           >; // ⌥ + \
       };
 
-      single_quote: single_quote {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <
-            &macro_tap &kp MINUS
-          >; // ' key
-      };
+      //single_quote: single_quote {
+      //    compatible = "zmk,behavior-macro";
+      //    #binding-cells = <0>;
+      //    bindings = <
+      //      &macro_tap &kp MINUS
+      //    >; // ' key
+      //};
 
-      double_quote: double_quote {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <
-            &macro_press &kp LSHFT 
-            &macro_tap &kp MINUS
-            &macro_release &kp LSHFT 
-          >;
-      };
+      //double_quote: double_quote {
+      //    compatible = "zmk,behavior-macro";
+      //    #binding-cells = <0>;
+      //    bindings = <
+      //      &macro_press &kp LSHFT 
+      //      &macro_tap &kp MINUS
+      //      &macro_release &kp LSHFT 
+      //    >;
+      //};
 
-      asterisk: asterisk {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LSHFT 
-              &macro_tap &kp N8
-              &macro_release &kp LSHFT 
-            >;
-        };
+      //asterisk: asterisk {
+      //    compatible = "zmk,behavior-macro";
+      //    #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LSHFT 
+      //        &macro_tap &kp N8
+      //        &macro_release &kp LSHFT 
+      //      >;
+      //  };
 
-        at_sign: at_sign {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LALT 
-              &macro_tap &kp N2
-              &macro_release &kp LALT 
-            >; // ⌥ + 2
-        };
+      //  at_sign: at_sign {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LALT 
+      //        &macro_tap &kp N2
+      //        &macro_release &kp LALT 
+      //      >; // ⌥ + 2
+      //  };
 
-        caret: caret {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LALT
-              &macro_tap &kp N6
-              &macro_release &kp LALT
-            >;
-        };
+      //  caret: caret {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LALT
+      //        &macro_tap &kp N6
+      //        &macro_release &kp LALT
+      //      >;
+      //  };
 
-        tilde: tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LALT 
-              &macro_tap &kp N4
-              &macro_release &kp LALT
-            >; // ⌥ + 4
-        };
+      //  tilde: tilde {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LALT 
+      //        &macro_tap &kp N4
+      //        &macro_release &kp LALT
+      //      >; // ⌥ + 4
+      //  };
 
-        equals: equals {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_tap &kp EQUAL
-            >;
-        };
+      //  equals: equals {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_tap &kp EQUAL
+      //      >;
+      //  };
 
-        plus: plus {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_tap &kp PLUS
-            >; // dedicated key on Nordic layout
-        };
+      //  plus: plus {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_tap &kp PLUS
+      //      >; // dedicated key on Nordic layout
+      //  };
 
-        backslash: backslash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LALT 
-              &macro_press &kp LSHFT 
-              &macro_tap &kp N7
-              &macro_release &kp LSHFT 
-              &macro_release &kp LALT 
-            >; // ⌥ + ⇧ + 7
-        };
+      //  backslash: backslash {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LALT 
+      //        &macro_press &kp LSHFT 
+      //        &macro_tap &kp N7
+      //        &macro_release &kp LSHFT 
+      //        &macro_release &kp LALT 
+      //      >; // ⌥ + ⇧ + 7
+      //  };
 
-        slash: slash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LSHFT 
-              &macro_tap &kp N7
-              &macro_release &kp LSHFT 
-            >;
-        };
+      //  slash: slash {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LSHFT 
+      //        &macro_tap &kp N7
+      //        &macro_release &kp LSHFT 
+      //      >;
+      //  };
 
-        question: question {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-              &macro_press &kp LSHFT 
-              &macro_tap &kp MINUS
-              &macro_release &kp LSHFT 
-            >;
-        };
+      //  question: question {
+      //      compatible = "zmk,behavior-macro";
+      //      #binding-cells = <0>;
+      //      bindings = <
+      //        &macro_press &kp LSHFT 
+      //        &macro_tap &kp MINUS
+      //        &macro_release &kp LSHFT 
+      //      >;
+      //  };
 
 
       };
@@ -320,7 +320,7 @@ keym  ap { compatible = "zmk,keymap";
             label = "Sym";
             bindings = <
 &studio_unlock &trans &trans &trans &kp N0 &kp N0 &kp N0 &kp N0 &trans &trans &trans &bootloader
-&trans &trans &trans &trans &kp N0 &kp N0 &kp N0 &kp N0 &trans &trans &trans &trans
+&trans &trans &trans &trans &kp N0 &backtick &kp N0 &kp N0 &trans &trans &trans &trans
 &trans &trans &trans &trans &kp N0 &kp N0 &kp N0 &kp N0 &trans &trans &trans &trans
 #ifdef TBLE_DUAL_2U
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
