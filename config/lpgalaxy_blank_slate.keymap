@@ -130,7 +130,6 @@
           >;
       };
     
-      // wrong
       single_quote: single_quote {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -149,24 +148,20 @@
           >;
       };
 
-      // wrong
       at_sign: at_sign {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
-              &macro_press &kp LSHFT 
-              &macro_tap &kp MINUS
-              &macro_release &kp LSHFT 
+              &macro_tap &kp BSLH
           >;
       };
 
-      // wrong
       asterisk: asterisk {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp LSHFT 
-              &macro_tap &kp N8
+              &macro_tap &kp BSLH
               &macro_release &kp LSHFT 
           >;
       };
@@ -179,34 +174,33 @@
           >;
       };
 
-      // wrong
       caret: caret {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
-              &macro_press &kp RALT
-              &macro_tap &kp N6
-              &macro_release &kp RALT
+              &macro_press &kp LSHFT
+              &macro_tap &kp RBKT
+              &macro_release &kp LSHFT
           >;
       };
 
-      // wrong
       tilde: tilde {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
               &macro_press &kp RALT 
-              &macro_tap &kp N4
+              &macro_tap &kp RBKT
               &macro_release &kp RALT
           >;
       };
 
-      // wrong
       equals: equals {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
-              &macro_tap &kp EQUAL
+              &macro_press &kp LSHFT
+              &macro_tap &kp N0
+              &macro_release &kp LSHFT
           >;
       };
 
