@@ -140,23 +140,23 @@
       //    >; // ⌥ + \
       //};
 
-      single_quote: single_quote {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <
-              &macro_tap &kp MINUS
-          >;
-      };
-
-      //double_quote: double_quote {
+      //single_quote: single_quote {
       //    compatible = "zmk,behavior-macro";
       //    #binding-cells = <0>;
       //    bindings = <
-      //      &macro_press &kp LSHFT 
-      //      &macro_tap &kp MINUS
-      //      &macro_release &kp LSHFT 
+      //        &macro_tap &kp MINUS
       //    >;
       //};
+
+      double_quote: double_quote {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+            &macro_press &kp LSHFT 
+            &macro_tap &kp MINUS
+            &macro_release &kp LSHFT 
+          >;
+      };
 
       //asterisk: asterisk {
       //    compatible = "zmk,behavior-macro";
