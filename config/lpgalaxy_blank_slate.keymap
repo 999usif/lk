@@ -129,8 +129,9 @@
               &macro_release &kp RALT
           >;
       };
-
-      backtick: backtick {
+    
+      // wrong
+      single_quote: single_quote {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -140,7 +141,7 @@
           >;
       };
 
-      single_quote: single_quote {
+      plus: plus {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -148,7 +149,8 @@
           >;
       };
 
-      double_quote: double_quote {
+      // wrong
+      at_sign: at_sign {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -158,6 +160,7 @@
           >;
       };
 
+      // wrong
       asterisk: asterisk {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -168,7 +171,7 @@
           >;
       };
 
-      at_sign: at_sign {
+      double_quote: double_quote {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
@@ -176,6 +179,7 @@
           >;
       };
 
+      // wrong
       caret: caret {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -186,6 +190,7 @@
           >;
       };
 
+      // wrong
       tilde: tilde {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -196,6 +201,7 @@
           >;
       };
 
+      // wrong
       equals: equals {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
@@ -204,7 +210,7 @@
           >;
       };
 
-      plus: plus {
+      backtick: backtick {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
