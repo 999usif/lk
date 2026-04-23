@@ -168,35 +168,33 @@
           >;
       };
 
-    //   at_sign: at_sign {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_tap &kp N2
-    //         &macro_release &kp LALT 
-    //       >; // ⌥ + 2
-    //   };
+      at_sign: at_sign {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_tap &kp AT_SIGN
+          >;
+      };
 
-    //   caret: caret {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT
-    //         &macro_tap &kp N6
-    //         &macro_release &kp LALT
-    //       >;
-    //   };
+      caret: caret {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp RALT
+              &macro_tap &kp N6
+              &macro_release &kp RALT
+          >;
+      };
 
-    //   tilde: tilde {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_press &kp LALT 
-    //         &macro_tap &kp N4
-    //         &macro_release &kp LALT
-    //       >; // ⌥ + 4
-    //   };
+      tilde: tilde {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+              &macro_press &kp RALT 
+              &macro_tap &kp N4
+              &macro_release &kp RALT
+          >;
+      };
 
       //equals: equals {
       //    compatible = "zmk,behavior-macro";
