@@ -140,13 +140,13 @@
           >;
       };
 
-    //   single_quote: single_quote {
-    //       compatible = "zmk,behavior-macro";
-    //       #binding-cells = <0>;
-    //       bindings = <
-    //         &macro_tap &kp MINUS
-    //       >; // ' key
-    //   };
+      single_quote: single_quote {
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings = <
+            &macro_tap &kp MINUS
+          >;
+      };
 
     //   double_quote: double_quote {
     //       compatible = "zmk,behavior-macro";
