@@ -144,8 +144,8 @@
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
           bindings = <
-            &macro_tap &kp MINUS
-          >; // ' key
+              &macro_tap &kp MINUS
+          >;
       };
 
       //double_quote: double_quote {
