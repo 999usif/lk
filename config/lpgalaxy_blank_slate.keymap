@@ -198,21 +198,21 @@
           >; // ⌥ + 4
       };
 
-      equals: equals {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <
-            &macro_tap &kp EQUAL
-          >;
-      };
+      //equals: equals {
+      //    compatible = "zmk,behavior-macro";
+      //    #binding-cells = <0>;
+      //    bindings = <
+      //      &macro_tap &kp EQUAL
+      //    >;
+      //};
 
-      plus: plus {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings = <
-            &macro_tap &kp PLUS
-          >; // dedicated key on Nordic layout
-      };
+      //plus: plus {
+      //    compatible = "zmk,behavior-macro";
+      //    #binding-cells = <0>;
+      //    bindings = <
+      //      &macro_tap &kp PLUS
+      //    >; // dedicated key on Nordic layout
+      //};
 
       backslash: backslash {
           compatible = "zmk,behavior-macro";
@@ -320,8 +320,8 @@ keymap { compatible = "zmk,keymap";
             label = "Sym";
             bindings = <
 &studio_unlock     &kp LBRC   &kp AMPS   &kp STAR    &tilde     &single_quote     &double_quote     &asterisk    &trans       &trans       &trans     &bootloader
-&trans     &kp COLON  &kp DLLR   &kp PRCNT   &at_sign    &backtick     &caret     &equals    &trans       &trans       &trans     &trans
-&trans     &kp TILDE  &kp EXCL   &kp AT      &plus     &backslash     &slash     &question    &trans       &trans       &trans     &trans
+&trans     &kp COLON  &kp DLLR   &kp PRCNT   &at_sign    &backtick     &caret     &kp N0  &trans       &trans       &trans     &trans
+&trans     &trans  &trans   &trans      &kp N0     &backslash     &slash     &question    &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
 &trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans         &trans &trans &trans
 #endif
