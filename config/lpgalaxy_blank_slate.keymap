@@ -278,7 +278,7 @@ keymap { compatible = "zmk,keymap";
 #ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #elif defined(MACOS)
- &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
 #endif
             >;
         };
@@ -292,7 +292,7 @@ keymap { compatible = "zmk,keymap";
 #ifdef WINDOWS
  &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
 #elif defined(MACOS)
- &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
 #endif
             >;
         };
@@ -309,7 +309,7 @@ keymap { compatible = "zmk,keymap";
  &pipe &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
  &kp CAPS  &lcurl &rcurl &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
  &kp LSHFT &lessthan &greaterthan &lpar &rpar &none &none &none &none &none &none &kp RSHFT
- &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
+ &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
 #endif
             >;
         };
