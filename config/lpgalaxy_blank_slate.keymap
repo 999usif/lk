@@ -320,9 +320,7 @@ keymap { compatible = "zmk,keymap";
 &studio_unlock &trans &trans &trans &tilde &single_quote &double_quote &asterisk &trans &trans &trans &bootloader
 &bt BT_SEL 1 &trans &trans &trans &at_sign &backtick &caret &equals &trans &trans &trans &trans
 &bt BT_SEL 2 &trans &trans &trans &plus &backslash &slash &question &trans &trans &trans &trans
-#ifdef TBLE_DUAL_2U
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-#endif
+&bt BT_CLR_ALL &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
 
     };
