@@ -15,6 +15,10 @@
 // #define TBLE_MIT     1
 #define TBLE_DUAL_2U 1
 
+// TODO: remove this
+//#define WINDOWS 1
+#define MACOS 1
+
 #define MAC_NUM_L 1
 #define MAC_NAV_L 2
 #define MAC_SYM_L 3
