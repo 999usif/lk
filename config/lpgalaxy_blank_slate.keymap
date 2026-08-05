@@ -15,17 +15,16 @@
 // #define TBLE_MIT     1
 #define TBLE_DUAL_2U 1
 
-// TODO: remove this
-//#define WINDOWS 1
-#define MACOS 1
-
+#define MAC_BASE_L 0
 #define MAC_NUM_L 1
 #define MAC_NAV_L 2
 #define MAC_SYM_L 3
 
-#define NUM_L 5
-#define NAV_L 6
-#define SYM_L 7
+
+#define WIN_BASE_L 4
+#define WIN_NUM_L 5
+#define WIN_NAV_L 6
+#define WIN_SYM_L 7
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 // &lt { quick_tap_ms = <200>; };
@@ -263,13 +262,17 @@
 	  };
   };
 
-// Conditional layer only when we have less thumb keys
+  // Conditional layer only when we have less thumb keys
   #ifdef TBLE_DUAL_2U
-  cond_layers {
+  conditional_layers {
     compatible = "zmk,conditional-layers";
-	  tri {
-	    if-layers = <NUM_L NAV_L>;
-	    then-layer = <SYM_L>;
+	  mac_sym {
+	    if-layers = <MAC_NUM_L MAC_NAV_L>;
+	    then-layer = <MAC_SYM_L>;
+    };
+	  windows_sym {
+	    if-layers = <WIN_NUM_L WIN_NAV_L>;
+	    then-layer = <WIN_SYM_L>;
     };
   };
   #endif
@@ -278,61 +281,94 @@
     compatible = "zmk,keymap";
 
     // Layer 0: Mac Base
-    base_layer {
-      label = "Base";
+    mac_base_layer {
+      label = "Mac Base";
       bindings = <
         &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
         &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
         &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-        #ifdef WINDOWS
-        &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
-        #elif defined(MACOS)
-        &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp BKSP                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
-        #endif
+        &kp LCTRL  &kp LALT   &kp LGUI   &mo MAC_NUM_L         &kp BKSP                        &kp SPACE                &mo MAC_NAV_L   &kp RALT   &kp GLOBE      &kp RET
       >;
     };
 
     // Layer 1: Mac Numbers
-    num_layer {
-      label = "Num";
+    mac_num_layer {
+      label = "Mac Num";
       bindings = <
         &pipe &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
         &kp CAPS  &none  &none  &none  &none  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
         &kp LSHFT &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
-        #ifdef WINDOWS
-        &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
-        #elif defined(MACOS)
-        &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
-        #endif
+        &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
 
     // Layer 2: Mac Navigation
-    nav_layer {
-      label = "Nav";
+    mac_nav_layer {
+      label = "Mac Nav";
       bindings = <
-        #ifdef WINDOWS
-        &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-        &kp CAPS  &none &none &none &none &none &none &none &none &none &none &kp F12
-        &kp LSHFT &none &none &none &none &none &none &none &none &none &none &kp RSHFT
-        &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp RCTRL      &kp RET
-        #elif defined(MACOS)
         &pipe &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
         &kp CAPS  &lcurl &rcurl &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
         &kp LSHFT &lessthan &greaterthan &lpar &rpar &none &none &none &none &none &none &kp RSHFT
-        &kp LCTRL  &kp LALT   &kp LGUI   &mo NUM_L         &kp DEL                        &kp SPACE                &mo NAV_L   &kp RALT   &kp GLOBE      &kp RET
-        #endif
+        &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
 
     // Layer 3: Mac Symbols
-    sym_layer {
-      label = "Sym";
+    mac_sym_layer {
+      label = "Mac Sym";
       bindings = <
-        &studio_unlock &trans &trans &trans &tilde &single_quote &double_quote &asterisk &trans &trans &trans &bootloader
-        &bt BT_SEL 1 &trans &trans &trans &at_sign &backtick &caret &equals &trans &trans &trans &trans
-        &bt BT_SEL 2 &trans &trans &trans &plus &backslash &slash &question &trans &trans &trans &trans
-        &bt BT_CLR_ALL &trans &trans &trans &trans &trans &trans &trans &trans &trans
+        &tog WIN_BASE_L &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &none &none &bootloader
+        &bt BT_SEL 1 &none &none &none &at_sign &backtick &caret &equals &none &none &none &none
+        &bt BT_SEL 2 &none &none &none &plus &backslash &slash &question &none &none &none &none
+        &bt BT_CLR_ALL &none &none &none &none &none &none &none &none &none
+      >;
+    };
+
+
+
+
+
+    // Layer 4: Win Base
+    win_base_layer {
+      label = "Win Base";
+      bindings = <
+        &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp LEFT_BRACKET
+        &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+        &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+        &kp LCTRL  &kp LGUI   &kp LALT   &mo WIN_NUM_L         &kp BKSP                        &kp SPACE                &mo WIN_NAV_L   &kp RALT   &kp RCTRL      &kp RET
+      >;
+    };
+
+    // Layer 5: Win Numbers
+    win_num_layer {
+      label = "Win Num";
+      bindings = <
+        &pipe &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
+        &kp CAPS  &none  &none  &none  &none  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+        &kp LSHFT &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
+        &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
+      >;
+    };
+
+    // Layer 6: Win Navigation
+    win_nav_layer {
+      label = "Win Nav";
+      bindings = <
+        &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+        &kp CAPS  &none &none &none &none &none &none &none &none &none &none &kp F12
+        &kp LSHFT &none &none &none &none &none &none &none &none &none &none &kp RSHFT
+        &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
+      >;
+    };
+
+    // Layer 3: Mac Symbols
+    win_sym_layer {
+      label = "Win Sym";
+      bindings = <
+        &tog WIN_BASE_L &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &none &none &bootloader
+        &bt BT_SEL 1 &none &none &none &at_sign &backtick &caret &equals &none &none &none &none
+        &bt BT_SEL 2 &none &none &none &plus &backslash &slash &question &none &none &none &none
+        &bt BT_CLR_ALL &none &none &none &none &none &none &none &none &none
       >;
     };
 
