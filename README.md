@@ -18,7 +18,7 @@ For full build guide for the Blank Slate, see https://docs.lpgala.xyz/docs/blank
 
 - [ ] globe button for macos
 
-# bruh
+# Native Setup and Build
 [src](https://zmk.dev/docs/development/local-toolchain/setup/native) 
 ## prereq
 [Install dependencies section](https://docs.zephyrproject.org/4.1.0/develop/getting_started/index.html#install-dependencies) 
@@ -42,7 +42,7 @@ git cmake ninja-build gperf ccache dfu-util device-tree-compiler wget python3-de
 13. cd into sdk dir         `cd zephyr-sdk-0.16.8` 
 14. run setup               `./setup.sh` 
 
-## build (lpgalaxy_blank_slate)
+## more env setup
 1. cd zmk-dir               
 ```bash
 cd <path>/lk
@@ -61,7 +61,8 @@ pip install "cmake==3.30.5"
 pip install --force-reinstall "setuptools<81"
 ```
 
-## west build normal
+## west build normal (lpgalaxy_blank_slate-zmk)
+
 5. west build
 ```bash
 west build -s zmk/app -d /tmp/zmk-build -b lpgalaxy_blank_slate -- -DZMK_CONFIG=$PWD/config
