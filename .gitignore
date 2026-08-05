@@ -1,3 +1,6 @@
-
 .zmk/
-venv/
+.west/
+blank-slate-zmk-module/
+modules/
+zephyr/
+zmk/
