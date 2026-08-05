@@ -4,3 +4,4 @@ blank-slate-zmk-module/
 modules/
 zephyr/
 zmk/
+zmk-build/
