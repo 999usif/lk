@@ -366,9 +366,9 @@
     win_sym_layer {
       label = "Win Sym";
       bindings = <
-        &tog WIN_BASE_L &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &none &none &bootloader
-        &bt BT_SEL 1 &none &none &none &at_sign &backtick &caret &equals &none &none &none &none
-        &bt BT_SEL 2 &none &none &none &plus &backslash &slash &question &none &none &none &none
+        &tog WIN_BASE_L &studio_unlock &none &none &kp NB_TILDE &kp NB_SINGLE_QUOTE &kp NB_DOUBLE_QUOTES &kp NB_ASTERISK &none &none &none &bootloader
+        &bt BT_SEL 1 &none &none &none &kp NB_AT_SIGN &kp NB_GRAVE &kp NB_CARET &kp NB_EQUAL &none &none &none &none
+        &bt BT_SEL 2 &none &none &none &kp NB_PLUS &kp NB_BACKSLASH &kp NB_SLASH &kp NB_QUESTION &none &none &none &none
         &bt BT_CLR_ALL &none &none &none &none &none &none &none &none &none
       >;
     };
