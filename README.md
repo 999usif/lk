@@ -7,14 +7,8 @@ For full build guide for the Blank Slate, see https://docs.lpgala.xyz/docs/blank
 
 
 # todo
-- [ ] fix macros for curly braces
-- [ ] fix macros for square braces
-- [ ] fix macros for lt and gt
 
 - [ ] printscreen
-
-- [ ] get battery
-- [ ] secure keyboard in case somehow (friction fit?)
 
 - [ ] globe button for macos
 
