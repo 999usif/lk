@@ -319,7 +319,7 @@
     mac_sym_layer {
       display-name = "Mac Sym";
       bindings = <
-        &soft_off &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &bootloader &bt BT_CLR_ALL
+        &soft_off &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &none &bootloader &bt BT_CLR_ALL
         &tog WIN_BASE_L &none &none &none &at_sign &backtick &caret &equals &none &none &none &bt BT_SEL 1 
         &trans &none &none &none &plus &backslash &slash &question &none &none &none &bt BT_SEL 2
         &trans &trans &trans &none &none &none &none &trans &trans &none
