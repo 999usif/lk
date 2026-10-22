@@ -5,3 +5,7 @@ modules/
 zephyr/
 zmk/
 zmk-build/
+.venv/
+bootloader/
+tools/
+doc/

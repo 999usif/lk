@@ -59,7 +59,7 @@ pip install --force-reinstall "setuptools<81"
 
 5. west build
 ```bash
-west build -s zmk/app -d ./zmk-build -b lpgalaxy_blank_slate -- -DZMK_CONFIG=$PWD/config
+west build -p -s zmk/app -d ./zmk-build -b lpgalaxy_blank_slate -- -DZMK_CONFIG=$PWD/config
 ```
 6. rename the output uf2 file
 ```bash
@@ -71,11 +71,17 @@ cp ./zmk-build/zephyr/zmk.uf2 ./zmk-build/artifacts/lpgalaxy_blank_slate-zmk.uf2
 ## west build studio (lpgalaxy_blank_slate-studio)
 5. west build
 ```bash
-west build -s zmk/app -d "./zmk-build" -b "lpgalaxy_blank_slate" -S "studio-rpc-usb-uart" -- -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
+west build -p -s zmk/app -d "./zmk-build" -b "lpgalaxy_blank_slate" -S "studio-rpc-usb-uart" -- -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y
 ```
 6. rename the output uf2 file
 ```bash
 mkdir ./zmk-build/artifacts
 [ -f /tmp/zmk-biuld/zephyr/zmk.uf2 ]
 cp ./zmk-build/zephyr/zmk.uf2 ./zmk-build/artifacts/lpgalaxy_blank_slate-studio.uf2
+```
+
+## west build stuid with reset argument
+5. west build
+```bash
+west build -p -s zmk/app -d "./zmk-build" -b "lpgalaxy_blank_slate" -S "studio-rpc-usb-uart" -- -DZMK_CONFIG=$PWD/config -DCONFIG_ZMK_STUDIO=y -DSHIELD=settings_reset
 ```
