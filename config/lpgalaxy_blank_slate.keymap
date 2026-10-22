@@ -299,7 +299,7 @@
       bindings = <
         &kp NB_PIPE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
         &kp CAPS  &none  &none  &none  &none  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-        &kp LSHFT &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
+        &trans &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &trans
         &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
@@ -310,7 +310,7 @@
       bindings = <
         &kp NB_PIPE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
         &kp CAPS  &lcurl &rcurl &lbrkt &rbrkt &none &none &none &none &none &none &kp F12
-        &kp LSHFT &lessthan &greaterthan &lpar &rpar &none &none &none &none &none &none &kp RSHFT
+        &trans &lessthan &greaterthan &lpar &rpar &none &none &none &none &none &none &trans
         &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
@@ -319,8 +319,8 @@
     mac_sym_layer {
       display-name = "Mac Sym";
       bindings = <
-        &tog WIN_BASE_L &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &bootloader &bt BT_CLR_ALL
-        &none &none &none &none &at_sign &backtick &caret &equals &none &none &none &bt BT_SEL 1 
+        &soft_off &studio_unlock &none &none &tilde &single_quote &double_quote &asterisk &none &bootloader &bt BT_CLR_ALL
+        &tog WIN_BASE_L &none &none &none &at_sign &backtick &caret &equals &none &none &none &bt BT_SEL 1 
         &trans &none &none &none &plus &backslash &slash &question &none &none &none &bt BT_SEL 2
         &trans &trans &trans &none &none &none &none &trans &trans &none
       >;
@@ -347,7 +347,7 @@
       bindings = <
         &kp NB_PIPE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
         &kp CAPS  &none  &none  &none  &none  &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-        &kp LSHFT &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &kp RSHFT
+        &trans &none  &none  &none  &none  &none &kp MINUS &kp EQUAL &kp RBKT &kp BSLH &kp KP_EQUAL &trans
         &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
@@ -358,7 +358,7 @@
       bindings = <
         &kp NB_PIPE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
         &kp CAPS  &kp NB_LEFT_BRACE &kp NB_RIGHT_BRACE &kp NB_LEFT_BRACKET &kp NB_RIGHT_BRACKET &none &none &none &none &none &none &kp F12
-        &kp LSHFT &kp NB_LESS_THAN &kp NB_GREATER_THAN &kp NB_LEFT_PARENTHESIS &kp NB_RIGHT_PARENTHESIS &none &none &none &none &none &none &kp RSHFT
+        &trans &kp NB_LESS_THAN &kp NB_GREATER_THAN &kp NB_LEFT_PARENTHESIS &kp NB_RIGHT_PARENTHESIS &none &none &none &none &none &none &trans
         &trans &trans &trans &trans &kp DEL &trans &trans &trans &trans &trans  
       >;
     };
@@ -367,10 +367,10 @@
     win_sym_layer {
       display-name = "Win Sym";
       bindings = <
-        &tog WIN_BASE_L &studio_unlock &none &none &kp NB_TILDE &kp NB_SINGLE_QUOTE &kp NB_DOUBLE_QUOTES &kp NB_ASTERISK &none &none &bootloader &bt BT_CLR_ALL
-        &none &none &none &none &kp NB_AT_SIGN &kp NB_GRAVE &kp NB_CARET &kp NB_EQUAL &none &none &none &bt BT_SEL 1 
+        &soft_off &studio_unlock &none &none &kp NB_TILDE &kp NB_SINGLE_QUOTE &kp NB_DOUBLE_QUOTES &kp NB_ASTERISK &none &none &bootloader &bt BT_CLR_ALL
+        &tog WIN_BASE_L &none &none &none &kp NB_AT_SIGN &kp NB_GRAVE &kp NB_CARET &kp NB_EQUAL &none &none &none &bt BT_SEL 1 
         &trans &none &none &none &kp NB_PLUS &kp NB_BACKSLASH &kp NB_SLASH &kp NB_QUESTION &none &none &none &bt BT_SEL 2 
-        &trans &trans &trans &none &none &none &none &trans &trans &none 
+        &trans &trans &trans &none &none &none &none &trans &trans &trans 
       >;
     };
 
